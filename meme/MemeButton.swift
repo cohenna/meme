@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// class used to pass the meme from the UITableView buttons to the action handlers
 class MemeButton : UIButton {
     var meme : Meme?
 }

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// handy function to compare two memes
 func ==(meme : Meme, meme2 : Meme) -> Bool {
     return meme.originalImage == meme2.originalImage
         && meme.memedImage == meme2.memedImage
@@ -33,6 +34,7 @@ class Meme {
     
 }
 
+// starting to look more like a real model, still pretty...crude
 class Memes {
     var memes : [Meme]
     

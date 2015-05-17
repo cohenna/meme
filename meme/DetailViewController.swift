@@ -17,12 +17,8 @@ class DetailViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.tableView.delegate = self
-        //self.tableView.
         imageView.image = meme?.memedImage
-        
         self.tabBarController?.hidesBottomBarWhenPushed
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -43,13 +39,9 @@ class DetailViewController : UIViewController {
     }
     
     @IBAction func deletePhoto(sender: UIButton) {
-        
         (UIApplication.sharedApplication().delegate as! AppDelegate).deleteMeme(meme!, viewController: self, okHandler: {
             self.navigationController?.popViewControllerAnimated(true)
         })
-        
-        
-
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -61,6 +53,5 @@ class DetailViewController : UIViewController {
     
     @IBAction func editPhoto(sender: UIButton) {
         performSegueWithIdentifier("EditPhotoFromDetailView", sender: meme)
-
     }
 }

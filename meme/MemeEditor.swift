@@ -18,7 +18,8 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     var currentMeme : Meme?
-    //var isEdit : Bool = false
+    
+    // used to determine whether this is an edit or a new meme
     var preEditMeme : Meme?
     
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -39,7 +40,6 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             bottomTextField.text = pem.bottomText
             imagePickerView.image = pem.originalImage
             shareButton.enabled = true
-            //isEdit = true
         }
         
         
@@ -64,7 +64,6 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     func reset() {
-        //currentMeme = nil
         shareButton.enabled = false
         imagePickerView.image = nil
         
@@ -74,11 +73,8 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         let memeTextAttributes = [
             NSStrokeColorAttributeName : UIColor.blackColor(),
             NSForegroundColorAttributeName : UIColor.whiteColor(),
-            //NSBackgroundColorAttributeName: UIColor.whiteColor(),
             NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            //NSBackgroundColorAttributeName : UIColor.whiteColor(),
             NSStrokeWidthAttributeName : -5.0,
-            //N: NSTextAlignment.Center
         ]
         
         
@@ -123,7 +119,6 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     func unsubscribeFromKeyboardNotifications() {
-        //NSNotificationCenter.defaultCenter().removeObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     

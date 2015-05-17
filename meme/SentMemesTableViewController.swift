@@ -15,11 +15,7 @@ class SentMemesTableViewController : UITableViewController { //, UITableViewDele
     var memeToEdit : Meme?
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.tableView.delegate = self
-        //self.tableView.
         self.tableView.editing = false
-        
-
     }
     
     @IBAction func editMeme(sender: UIButton, forEvent event: UIEvent) {
@@ -60,8 +56,6 @@ class SentMemesTableViewController : UITableViewController { //, UITableViewDele
     
     // open detail view
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        //super.tableView(tableView, indexPath)
-        //super.tableView(tableView, didSelectRowAtIndexPath: indexPath)
         performSegueWithIdentifier("TableViewToDetailView", sender: memes![indexPath.row])
         
     }
