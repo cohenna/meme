@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>46B3DAFA-4376-44BC-BE82-50A0176B8DA4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>meme</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F0EE701045586FC522579E5AA44054659960C6BC</key>
+		<string>github.com:cohenna/meme.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>meme.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F0EE701045586FC522579E5AA44054659960C6BC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:cohenna/meme.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F0EE701045586FC522579E5AA44054659960C6BC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F0EE701045586FC522579E5AA44054659960C6BC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>meme</string>
+		</dict>
+	</array>
+</dict>
+</plist>

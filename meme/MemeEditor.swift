@@ -15,8 +15,8 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var toolbar: UIToolbar!
-    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     var currentMeme : Meme?
     
     // used to determine whether this is an edit or a new meme
@@ -25,6 +25,8 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet weak var imagePickerView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         //if !UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Front) {
         if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
@@ -221,8 +223,7 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         }
     }
     
-    
-    @IBAction func share(sender: UIButton) {
+    @IBAction func share(sender: UIBarButtonItem) {
         var memedImage = generateMemedImage()
         currentMeme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, originalImage: imagePickerView.image!, memedImage: memedImage)
         var avc = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)

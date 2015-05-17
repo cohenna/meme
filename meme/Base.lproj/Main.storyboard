@@ -40,7 +40,7 @@
                                             <action selector="pickAnImage:" destination="vXZ-lx-hvc" id="irM-wP-QKe"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Camera" id="cQR-nF-L1f">
+                                    <barButtonItem systemItem="camera" id="cQR-nF-L1f">
                                         <connections>
                                             <action selector="pickAnImageWithCamera:" destination="vXZ-lx-hvc" id="6GP-54-Cwh"/>
                                         </connections>
@@ -66,17 +66,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Meme Editor" id="oEL-sK-IbT">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="VC3-TJ-OPZ">
-                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aWZ-Ui-lbH">
-                                <rect key="frame" x="16" y="-6" width="55" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="share:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6Ce-G7-WIB"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Tr2-6r-nlT">
+                            <connections>
+                                <action selector="share:" destination="vXZ-lx-hvc" id="tGK-F0-tLd"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="cAf-ca-XYN">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CbB-qq-nFt">
@@ -96,7 +89,7 @@
                         <outlet property="cameraButton" destination="cQR-nF-L1f" id="tgx-h6-lRN"/>
                         <outlet property="cancelButton" destination="CbB-qq-nFt" id="VN8-Aj-Uk0"/>
                         <outlet property="imagePickerView" destination="Ldu-v8-oKm" id="gtz-d2-iih"/>
-                        <outlet property="shareButton" destination="aWZ-Ui-lbH" id="17e-XH-oau"/>
+                        <outlet property="shareButton" destination="Tr2-6r-nlT" id="grU-1y-wkC"/>
                         <outlet property="toolbar" destination="LIh-xs-E7I" id="myR-qz-Wf0"/>
                         <outlet property="topTextField" destination="aVT-ki-o8H" id="pZx-Ud-LtP"/>
                     </connections>
@@ -359,11 +352,8 @@
             <point key="canvasLocation" x="736" y="1372"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="share" width="58" height="55"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="znv-dW-nq1"/>
-        <segue reference="KZf-xK-SNS"/>
+        <segue reference="btA-8G-amg"/>
+        <segue reference="u2r-UW-UKh"/>
     </inferredMetricsTieBreakers>
 </document>
