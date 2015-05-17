@@ -12,6 +12,26 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    // TODO: remove this terrible model hack then create a real model, persisting the memes either in local storage or in the cloud
+    var memes = Memes()
+    
+    // centralize delete functionality for reuse, could probably create some kind of helper/utilty class for this in the future, but leaving here for now since the model is here
+    func deleteMeme(meme : Meme, viewController : UIViewController, okHandler : ((Void) -> Void)!) {
+        var deleteAlert = UIAlertController(title: "Delete Photo", message: "Please confirm you wish to delete this photo.  This action cannot be undone.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        deleteAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+            self.memes.removeMeme(meme)
+            okHandler()
+        }))
+        
+        deleteAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+            
+        }))
+        
+        viewController.presentViewController(deleteAlert, animated: true, completion: nil)
+        
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -40,6 +60,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
 
 
 }
